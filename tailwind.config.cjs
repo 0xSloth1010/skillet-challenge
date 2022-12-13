@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -98,6 +100,89 @@ module.exports = {
     },
     fontFamily: {
       primary: ['IBM Plex Sans', 'sans-serif'],
+    },
+    fontSize: {
+      ...defaultTheme.fontSize,
+      h1: [
+        '48px',
+        {
+          letterSpacing: '-0.04em',
+          lineHeight: '42px',
+          fontWeight: 500,
+        },
+      ],
+      h2: [
+        '28px',
+        {
+          letterSpacing: '0.02em',
+          lineHeight: '42px',
+          fontWeight: 600,
+        },
+      ],
+      h3: [
+        '24px',
+        {
+          letterSpacing: '0.025em',
+          lineHeight: '36px',
+          fontWeight: 800,
+        },
+      ],
+      h4: [
+        '21px',
+        {
+          letterSpacing: '-0.01em',
+          lineHeight: '31px',
+          fontWeight: 800,
+        },
+      ],
+      h5: [
+        '21px',
+        {
+          letterSpacing: '-0.01em',
+          lineHeight: '17px',
+          fontWeight: 800,
+        },
+      ],
+      subtitle1: [
+        '17px',
+        {
+          letterSpacing: '-0.02em',
+          lineHeight: '25px',
+          fontWeight: 800,
+        },
+      ],
+      subtitle2: [
+        '17px',
+        {
+          letterSpacing: '-0.01em',
+          lineHeight: '25px',
+          fontWeight: 600,
+        },
+      ],
+      body: [
+        '14px',
+        {
+          letterSpacing: '0.03em',
+          lineHeight: '21px',
+          fontWeight: 500,
+        },
+      ],
+      caption: [
+        '12px',
+        {
+          letterSpacing: '0.03em',
+          lineHeight: '18px',
+          fontWeight: 700,
+        },
+      ],
+      'caption-xs': [
+        '11px',
+        {
+          letterSpacing: '0.03em',
+          lineHeight: '18px',
+          fontWeight: 700,
+        },
+      ],
     },
     extend: {
       backgroundImage: {
