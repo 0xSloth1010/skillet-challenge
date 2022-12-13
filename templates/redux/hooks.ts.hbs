@@ -1,0 +1,9 @@
+import { useAppSelector } from 'store/store'
+
+export const use{{pascalCase featureName}} = () => {
+  const {{featureName}}State = useAppSelector(({ {{featureName}} }) => {{featureName}})
+
+  return {
+    ...{{featureName}}State,
+  }
+}
