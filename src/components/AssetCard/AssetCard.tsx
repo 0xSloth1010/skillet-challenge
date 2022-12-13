@@ -20,7 +20,13 @@ export const AssetCard = ({ address }: AssetCardProps) => {
     <Box col>
       {assets && assets?.[address] && activeCollection && (
         <Box className="w-full mb-8" row alignCenter justify="between">
-          <Typography variant="h3">{activeCollection.name}</Typography>
+          <Box className="space-x-2" row alignCenter>
+            <img
+              className="rounded-md w-10 h-10 border border-solid border-dark-border"
+              src={activeCollection.image_url}
+            />
+            <Typography variant="h3">{activeCollection.name}</Typography>
+          </Box>
           <Box className="space-x-2" row>
             {activeCollection.external_url && (
               <a
